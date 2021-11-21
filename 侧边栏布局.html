@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="wrap">
+    <!--    侧边栏-->
+    <div class="toolBar toolOut">
+        <!--内容-->
+        <div class="toolContent">
+            <!--按钮-->
+            <div class="toolBtn list ">
+
+            </div>
+
+        </div>
+        <!--列表-->
+        <ul class="toolList">
+            <li>
+                <em>商品会员</em>
+                <i class="icon"></i>
+            </li>
+            <li>
+                <em>商品会员</em>
+                <i class="icon"></i>
+            </li>
+            <li>
+                <em>商品会员</em>
+                <i class="icon"></i>
+            </li>
+            <li>
+                <em>商品会员</em>
+                <i class="icon"></i>
+            </li>
+            <li>
+                <em>商品会员</em>
+                <i class="icon"></i>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    window.onload = function () {
+
+        toolBar();
+
+        function toolBar() {
+            //获取元素
+            let toolBarNode = document.querySelector('.wrap .toolBar');
+            let toolBtnNode = document.querySelector('.wrap .toolBar .toolBtn');
+
+            let flag = true;
+
+            toolBtnNode.onclick = function () {
+                if (flag) {
+                    toolBarNode.className = 'toolBar toolWrap';
+                    toolBtnNode.className = 'toolBtn cross';
+                } else {
+                    toolBarNode.className = 'toolBar toolOut';
+                    toolBtnNode.className = 'toolBtn list';
+                }
+                flag = !flag;
+            };
+        }
+
+
+    };
+
+</script>
+</body>
+</html>
